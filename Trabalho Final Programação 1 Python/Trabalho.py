@@ -1,3 +1,7 @@
+#CATEGORIAS
+produto = ["Arroz","Feijão","Açúcar","Café","Lentilha"]
+peso = ["1kg", "2kg", "3kg", "5kg", "10kg"]
+
 #MATRIZ
 matriz = [["X"] * 5 for i in range(5)]
 
@@ -11,7 +15,7 @@ while True:
     print("3 - Alterar um dado")
     print("4 - Mostrar os dados")
     print("5 - Sair do programa")
-    print("Integrantes do grupo: Bernardo")
+    print("Integrantes do grupo: Bernardo, Emanoel, Yuri")
 
     opcao = input("")
 
@@ -50,6 +54,8 @@ while True:
 
     elif opcao == "4":
         print("Matriz:")
+        print(produto)
+        print(peso)
         for linha in matriz:
             for elemento in linha:
                 print(elemento, end=' ')
