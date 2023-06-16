@@ -8,7 +8,7 @@ matriz = [["X"] * 5 for i in range(5)]
 # MENU
 while True:
     print("")
-    print("----- MENU -----")
+    print("====== MENU ======")
     print("Digite uma opção")
     print("1 - Cadastrar um dado")
     print("2 - Pesquisar um dado")
@@ -16,11 +16,11 @@ while True:
     print("4 - Mostrar os dados")
     print("5 - Sair do programa")
     print("Integrantes do grupo: Bernardo, Emanoel, Yuri")
-
-    opcao = input("")
+    opcao = input("Digite um número para selecionar no uma opção no Menu: ")
 
     # LÓGICA
-
+    
+    # CADASTRAR UM DADO
     if opcao == "1":
         print("Cadastrar um dado")
 
@@ -35,7 +35,8 @@ while True:
         matriz[linha - 1][coluna - 1] = dado
 
         print("Dado cadastrado com sucesso!")
-
+        
+    #PESQUISAR UM DADO
     elif opcao == "2":
         print("Pesquisar um dado")
 
@@ -48,19 +49,36 @@ while True:
 
         dado = matriz[linha - 1][coluna - 1]
         print("Dado encontrado:", dado)
-
+        
+    #ALTERAR UM DADO
     elif opcao == "3":
         print("Alterar um dado")
+        linha = int(input("Digite a linha: "))
+        coluna = int(input("Digite a coluna: "))
+        dado = int(input("Digite o novo dado: "))
+        
+        if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
+            print("Erro: Linha ou coluna inválida")
+            continue
+        
+        matriz[linha - 1][coluna - 1] = dado
 
+        print("Dado alterado com sucesso!")
+    
+    #MOSTRAR DADOS
     elif opcao == "4":
-        print("Matriz:")
+        print("ㅤ")
+        print("Produtos:")
         print(produto)
+        print("\nPesagem:")
         print(peso)
+        print("\nMatriz:")
         for linha in matriz:
             for elemento in linha:
                 print(elemento, end=' ')
             print()
-
+    
+    #SAIR DO PROGRAMA
     elif opcao == "5":
         exit()
 
