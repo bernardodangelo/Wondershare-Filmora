@@ -14,13 +14,13 @@ while True:
     print("2 - Pesquisar um dado")
     print("3 - Alterar um dado")
     print("4 - Mostrar os dados")
-    print("5 - Sair do programa")
-    print("Integrantes do grupo: Bernardo, Emanoel, Yuri")
+    print("5 - Reiniciar a tabela")
+    print("6 - Sair do programa")
     opcao = input("Digite um número para selecionar no uma opção no Menu: ")
 
-    # LÓGICA
+# LÓGICA
     
-    # CADASTRAR UM DADO
+# CADASTRAR UM DADO
     if opcao == "1":
         print("Cadastrar um dado")
 
@@ -36,7 +36,7 @@ while True:
 
         print("Dado cadastrado com sucesso!")
         
-    #PESQUISAR UM DADO
+# PESQUISAR UM DADO
     elif opcao == "2":
         print("Pesquisar um dado")
 
@@ -50,7 +50,7 @@ while True:
         dado = matriz[linha - 1][coluna - 1]
         print("Dado encontrado:", dado)
         
-    #ALTERAR UM DADO
+# ALTERAR UM DADO
     elif opcao == "3":
         print("Alterar um dado")
         linha = int(input("Digite a linha: "))
@@ -65,7 +65,7 @@ while True:
 
         print("Dado alterado com sucesso!")
     
-    #MOSTRAR DADOS
+# MOSTRAR DADOS
     elif opcao == "4":
         print("ㅤ")
         print("Produtos:")
@@ -78,9 +78,17 @@ while True:
                 print(elemento, end=' ')
             print()
     
-    #SAIR DO PROGRAMA
+# REINICIAR TABELA
     elif opcao == "5":
+        matriz = [["X"] * 5 for i in range(5)]
+    
+# SAIR DO PROGRAMA
+    elif opcao == "6":
+        print("Obrigado por utilizar o programa!")
+        print("Integrantes do grupo: Bernardo, Emanoel, Yuri")
         exit()
 
+    
+# OPÇÃO INVÁLIDA
     else:
         print("Opção inválida")
