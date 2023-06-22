@@ -30,6 +30,7 @@ while True:
 
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
             print("Erro: Linha ou coluna inválida")
+            continue
 
         matriz[linha - 1][coluna - 1] = dado
 
@@ -44,9 +45,10 @@ while True:
 
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
             print("Erro: Linha ou coluna inválida")
+            continue
 
         dado = matriz[linha - 1][coluna - 1]
-        print("Dado encontrado:", dado, "!")
+        print("Dado encontrado:", dado)
         
 # ALTERAR UM DADO
     elif opcao == "3":
@@ -57,6 +59,7 @@ while True:
         
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
             print("Erro: Linha ou coluna inválida")
+            continue
         
         matriz[linha - 1][coluna - 1] = dado
 
