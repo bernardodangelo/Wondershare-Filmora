@@ -9,7 +9,6 @@ matriz = [["X"] * 5 for i in range(5)]
 while True:
     print("")
     print("====== MENU ======")
-    print("Digite uma opção")
     print("1 - Cadastrar um dado")
     print("2 - Pesquisar um dado")
     print("3 - Alterar um dado")
@@ -22,45 +21,61 @@ while True:
     
 # CADASTRAR UM DADO
     if opcao == "1":
-        print("Cadastrar um dado")
-
+        print("ㅤ")
         linha = int(input("Digite a linha: "))
-        coluna = int(input("Digite a coluna: "))
-        dado = int(input("Digite o dado para cadastro: "))
+        coluna = int(input("\nDigite a coluna: "))
+        dado = int(input("\nDigite o dado para cadastro: "))
 
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
+            print("ㅤ")
             print("Erro: Linha ou coluna inválida")
-
-        matriz[linha - 1][coluna - 1] = dado
-
-        print("Dado cadastrado com sucesso!")
+            
+        else:
+            matriz[linha - 1][coluna - 1] = dado
+        
+            print("ㅤ")
+            print("Dado cadastrado com sucesso!")
         
 # PESQUISAR UM DADO
     elif opcao == "2":
-        print("Pesquisar um dado")
-
+        print("ㅤ")
         linha = int(input("Digite a linha: "))
-        coluna = int(input("Digite a coluna: "))
+        coluna = int(input("\nDigite a coluna: "))
 
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
+            print("ㅤ")
             print("Erro: Linha ou coluna inválida")
-
-        dado = matriz[linha - 1][coluna - 1]
-        print("Dado encontrado:", dado, "!")
+        
+        else:
+            dado = matriz[linha - 1][coluna - 1]
+            print("ㅤ")
+            print("Dado encontrado:", dado)
         
 # ALTERAR UM DADO
     elif opcao == "3":
-        print("Alterar um dado")
+        print("ㅤ")
         linha = int(input("Digite a linha: "))
-        coluna = int(input("Digite a coluna: "))
-        dado = int(input("Digite o novo dado: "))
+        coluna = int(input("\nDigite a coluna: "))
+        anterior = matriz[linha - 1][coluna - 1]
+        print("Dado a ser alterado:", anterior)
+        escolha = str(input("\nDeseja prosseguir? (Digite 's' para sim e 'n' para não): "))
         
-        if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
-            print("Erro: Linha ou coluna inválida")
+        if escolha == "s":
+            print("ㅤ")
+            dado = int(input("Digite o novo dado: "))
         
-        matriz[linha - 1][coluna - 1] = dado
-
-        print("Dado alterado com sucesso!")
+            if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
+                print("ㅤ")
+                print("Erro: Linha ou coluna inválida")
+        
+            else:
+                matriz[linha - 1][coluna - 1] = dado
+                print("ㅤ")
+                print("Dado alterado com sucesso!")
+        
+        else:
+            print("ㅤ")
+            print("Nenhum dado foi alterado")
     
 # MOSTRAR DADOS
     elif opcao == "4":
@@ -78,14 +93,27 @@ while True:
 # REINICIAR TABELA
     elif opcao == "5":
         matriz = [["X"] * 5 for i in range(5)]
+        print("ㅤ")
+        print("Tabela reiniciada com sucesso!")
     
 # SAIR DO PROGRAMA
     elif opcao == "6":
-        print("Obrigado por utilizar o programa!")
-        print("Integrantes do grupo: Bernardo, Emanoel, Yuri")
+        print("ㅤ")
+        print("Integrantes do grupo:")
+        print("\nBernardo")
+        print("Emanoel")
+        print("Yuri")
+        print("\nTema:")
+        print("\nEstoque de Produtos")
+        print("\nProfessor(a):")
+        print("\nRenata Laranja")
+        print("\nDisciplina:")
+        print("\nProgramação 1")
+        print("\nObrigado por utilizar o programa!")
+        print("")
         exit()
 
-    
 # OPÇÃO INVÁLIDA
     else:
-        print("Opção inválida")
+        print("ㅤ")
+        print("Opção inválida! Digite um número correspondente a uma opção do menu.")
