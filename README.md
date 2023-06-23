@@ -2,9 +2,9 @@
 
 A simple Python program to perform the registration, search, and modification of data within a matrix.
 
-## Contributors
+## Contributors 👥
 
-@Emanuel231032 and @YuriNRamos.
+[@Emanuel231032] (https://www.github.com/Emanuel231032) and [@YuriNRamos] (https://www.github.com/YuriNRamos).
 
 ## License 🧾
 
