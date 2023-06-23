@@ -1,8 +1,8 @@
-#VETORES
+# VETORES
 produto = ["Arroz","Feijão","Açúcar","Café","Lentilha"]
 peso = ["1kg", "2kg", "3kg", "5kg", "10kg"]
 
-#MATRIZ
+# MATRIZ
 matriz = [["X"] * 5 for i in range(5)]
 
 # MENU
@@ -16,7 +16,7 @@ while True:
     print("5 - Reiniciar a tabela")
     print("6 - Sair do programa")
     opcao = input("Digite um número para selecionar no uma opção no Menu: ")
-    
+
 # CADASTRAR UM DADO
     if opcao == "1":
         print("ㅤ")
@@ -27,13 +27,12 @@ while True:
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
             print("ㅤ")
             print("Erro: Linha ou coluna inválida.")
-            
+
         else:
             matriz[linha - 1][coluna - 1] = dado
-        
             print("ㅤ")
             print("Dado cadastrado com sucesso!")
-        
+
 # PESQUISAR UM DADO
     elif opcao == "2":
         print("ㅤ")
@@ -43,12 +42,12 @@ while True:
         if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
             print("ㅤ")
             print("Erro: Linha ou coluna inválida.")
-        
+
         else:
             dado = matriz[linha - 1][coluna - 1]
             print("ㅤ")
             print("Dado encontrado:", dado)
-        
+
 # ALTERAR UM DADO
     elif opcao == "3":
         print("ㅤ")
@@ -57,24 +56,24 @@ while True:
         anterior = matriz[linha - 1][coluna - 1]
         print("Dado a ser alterado:", anterior)
         escolha = str(input("\nDeseja prosseguir? (Digite 's' para sim e 'n' para não): "))
-        
+
         if escolha == "s":
             print("ㅤ")
             dado = int(input("Digite o novo dado: "))
-        
+
             if linha > 5 or linha < 1 or coluna > 5 or coluna < 1:
                 print("ㅤ")
                 print("Erro: Linha ou coluna inválida.")
-        
+
             else:
                 matriz[linha - 1][coluna - 1] = dado
                 print("ㅤ")
                 print("Dado alterado com sucesso!")
-        
+
         else:
             print("ㅤ")
             print("Nenhum dado foi alterado.")
-    
+
 # MOSTRAR DADOS
     elif opcao == "4":
         print("ㅤ")
@@ -87,13 +86,13 @@ while True:
             for elemento in linha:
                 print(elemento, end=' ')
             print()
-    
-# REINICIAR TABELA
+
+# REINICIAR MATRIZ
     elif opcao == "5":
         matriz = [["X"] * 5 for i in range(5)]
         print("ㅤ")
         print("Tabela reiniciada com sucesso!")
-    
+
 # SAIR DO PROGRAMA
     elif opcao == "6":
         print("ㅤ")
