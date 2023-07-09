@@ -6,6 +6,10 @@ A simple Python program to perform the registration, search, and modification of
 
 @Emanuel231032 and @YuriNRamos.
 
+## Assignment grade ✍️
+
+![Grade](https://github.com/bernardodangelo/prog1-python-faesa/blob/main/Grade.png)
+
 ## License 🧾
 
 Licensed under the **MIT**. See [LICENSE](LICENSE.md) for more informations.
