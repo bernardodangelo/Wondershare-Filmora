@@ -1,4 +1,4 @@
-# Final FAESA programming 1 Python assignment
+# FAESA programming 1 Python assignment
 
 A simple Python program to perform the registration, search, and modification of data within a matrix.
 
